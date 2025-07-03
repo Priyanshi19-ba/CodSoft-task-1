@@ -5,7 +5,7 @@ Duration: 10 June 2025 - 10 July 2025
 Domain : Python Programmig 
 **Overview of the project**
 Project: A To-Do List Application Developed in Python.
-
+![image alt](https://github.com/Priyanshi19-ba/CodSoft-task-1/blob/main/Screenshot%202025-07-03%20164626.png?raw=true)
 **Objective**
 The objective of this project is to create a simple To-Do List app using Python to help users manage their daily tasks easily and stay organized.
 **Key Activities**
