@@ -1,0 +1,71 @@
+tasks = []
+
+print("---------To-Do List--------")
+print("--------------------------------------")
+
+while True:
+    print("\nChoose an option:")
+    print("1. View Tasks")
+    print("2. Add Task")
+    print("3. Mark Task as Done")
+    print("4. Delete Task")
+    print("5. Exit")
+
+    choice = input("Enter your choice (1-5): ")
+
+    if choice == "1":
+        if not tasks:
+            print("No tasks in the list.")
+        else:
+            print("\nYour To-Do List:")
+            for i in range(len(tasks)):
+                status = "Done" if tasks[i][1] else "Pending"
+                print(f"{i+1}. {tasks[i][0]} - [{status}]")
+
+    elif choice == "2":
+        task = input("Enter the task: ")
+        tasks.append([task, False])
+        print("Task added successfully.")
+
+    elif choice == "3":
+        if not tasks:
+            print("No tasks to mark as done.")
+        else:
+            for i in range(len(tasks)):
+                status = "Done" if tasks[i][1] else "Pending"
+                print(f"{i+1}. {tasks[i][0]} - [{status}]")
+            index = input("Enter the task number to mark as done: ")
+            if index.isdigit():
+                index = int(index) - 1
+                if 0 <= index < len(tasks):
+                    tasks[index][1] = True
+                    print("Task marked as done.")
+                else:
+                    print("Invalid task number.")
+            else:
+                print("Invalid input.")
+
+    elif choice == "4":
+        if not tasks:
+            print("No tasks to delete.")
+        else:
+            for i in range(len(tasks)):
+                print(f"{i+1}. {tasks[i][0]}")
+            index = input("Enter the task number to delete: ")
+            if index.isdigit():
+                index = int(index) - 1
+                if 0 <= index < len(tasks):
+                    removed = tasks.pop(index)
+                    print(f"Task '{removed[0]}' deleted.")
+                else:
+                    print("Invalid task number.")
+            else:
+                print("Invalid input.")
+
+    elif choice == "5":
+        print("Goodbye!")
+        break
+
+    else:
+        print("Please enter a valid choice(1-5)")
+
