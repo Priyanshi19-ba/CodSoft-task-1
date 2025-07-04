@@ -52,3 +52,21 @@ f"{i+1}. {tasks[i]} - [{status}]"
 6. Basic Input Validation
 isdigit() method
 Used to check if the user input is a valid number before converting it to an integer.
+**Key Insights:**
+1. Interactive Menu-Driven Interface
+The program uses a continuous loop to present a menu of options, allowing users to interactively manage their tasks until they choose to exit.
+2. Dynamic Task Management
+Users can view, add, mark as done, and delete tasks, making the program a fully functional to-do list manager.
+3. Task Status Tracking
+Each task is stored as a pair: [task_description, status], where status is a boolean indicating whether the task is "Pending" or "Done".
+This allows for clear status updates and visual feedback for completed tasks.
+4. Input Validation
+The program checks user inputs for validity (e.g., ensuring task numbers are digits and within the correct range) to prevent errors and improve user experience.
+5. User Feedback
+After each operation (add, mark as done, delete), the program provides immediate feedback, confirming the action or indicating errors.
+6. Handles Empty List Scenarios
+The code gracefully handles situations where there are no tasks to view, mark as done, or delete, ensuring robustness.
+7. Simple Data Structure
+Tasks are stored in a list of lists, making the code easy to understand and modify for beginners.
+8. Extensible Design
+The structure allows for easy addition of new features, such as editing tasks, saving/loading from a file, or categorizing tasks.
