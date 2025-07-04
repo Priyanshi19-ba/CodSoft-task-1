@@ -52,6 +52,7 @@ f"{i+1}. {tasks[i]} - [{status}]"
 6. Basic Input Validation
 isdigit() method
 Used to check if the user input is a valid number before converting it to an integer.
+
 **Key Insights:**
 1. Interactive Menu-Driven Interface
 The program uses a continuous loop to present a menu of options, allowing users to interactively manage their tasks until they choose to exit.
